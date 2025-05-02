@@ -1,0 +1,131 @@
+
+html, body{
+
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.Container{
+
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+
+}
+
+
+body{
+    background-image: url('image/leone-venter-VieM9BdZKFo-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+
+.main-title{
+       
+    font-size: 45px;
+    text-align: center;
+}
+
+.sub-title{
+
+    align-content: center;
+    
+}
+
+#sub{
+
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+.result-container{
+
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Lucida Console', monospace;
+    align-items: baseline;
+    
+   
+}
+
+.sentence-container{
+    display: flex;
+    justify-content: center;
+    justify-items: auto;
+    align-items: baseline;
+    gap: 30px;
+    
+}
+
+#button{
+    background-color: maroon;
+    color: antiquewhite;
+    font-size: 15px;
+}
+
+.new-text{
+
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ip{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.TextBox{
+
+    width: 200px;
+    height: 40px;
+    position: relative;
+    padding-bottom: 0;
+    font-size: 2vw;
+            
+}
+
+
+
+.shake{
+
+  color: rgb(193, 4, 67);
+  animation: shake 0.3s ease-in-out;
+  border: 10px;
+  border-color:  rgb(193, 4, 67);
+
+}
+
+.highlight{
+
+    background-color: gold;
+    font-weight: bold;
+    padding: 2px;
+}
+
+
+@keyframes shake{
+
+    0%{ transform: translateX(0);}
+    25%{ transform: translateX(-10px);}
+    50%{ transform: translateX(10px);}
+    75%{ transform : translateX(-10px);}
+    100%{transform : translateX(0);}
+
+}
