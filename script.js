@@ -26,8 +26,10 @@ const Sentences= ["Believe you can and you're halfway there." ,
 "Don't watch the clock; do what it does. Keep going." ];
 
 
+// Declaration of  Audio Variables and Files
 
-
+const errorSound=  new Audio("sound/error.wav");
+const successSound= new Audio("sound/success.wav");
 
 
 
@@ -162,6 +164,10 @@ function ValidateCharacter(inputCharacter,sentenceCharacter){
 
 function showErrorEffect(Element){
 
+    // Playing Error Sound
+
+    errorSound.play();
+
      // Adding Animation Class to Input Text Box
     Element.classList.add("shake");
 
@@ -213,6 +219,10 @@ function updateTimer(Start_Time){
 // Function To Display Congrats Message Upon Completion to Element
 
 function showCongratsMsg(Element,message){
+    
+    // Playing Success Sound
+    
+    successSound.play();
 
     // Updating Text Content
 
@@ -259,10 +269,15 @@ function showCongratsMsg(Element,message){
 
             // Values Of Element are Cleared Upon Button Click
 
+            typingBoxElement.value= "";
+            typingBoxElement.classList.remove("shake");
             
             CongratsMgsElement.textContent= " ";
 
             timeInfoElement.textContent= " ";
+
+            // Variable is reset
+            expectedWord=words[currentWordIndex];
 
 
             updateDisplaySentence();
