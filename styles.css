@@ -132,3 +132,31 @@ body{
     100%{transform : translateX(0);}
 
 }
+
+@media(max-width:767px){
+    
+    body{
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .main-title{
+        font-size: 32px;
+    }
+
+    .sub-title{
+        font-size: 10px;
+    }
+
+    .new-text{
+        font-size: 26px;
+    }
+
+    #CongratsMsg{
+        font-size: 20px; ;
+    }
+
+    #TimeInfo{
+        font-size: 20px;
+    }
+}
