@@ -287,7 +287,7 @@ function showCongratsMsg(Element,message){
     });
 
  
-
+    typingBoxElement.focus();
 
 
     //Calling Function To Validate Input, Show Time and Message

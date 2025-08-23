@@ -9,8 +9,8 @@ html, body{
 }
 
 .Container{
-
-height: 100vh;
+padding: 5rem;
+height: 80vh;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -24,7 +24,9 @@ body{
     background-image: url('image/leone-venter-VieM9BdZKFo-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+    background-attachment: fixed;
+    padding: env(safe-area-inset-top) env(safe-area-inset-bottom) env(safe-area-inset-left) env(safe-area-inset-right);
 }
 
 
@@ -37,6 +39,7 @@ body{
 .sub-title{
 
     align-content: center;
+    color: rgba(0,0,0,50%);
     
 }
 
@@ -97,7 +100,7 @@ body{
     height: 40px;
     position: relative;
     padding-bottom: 0;
-    font-size: 2vw;
+    font-size: 20px;
             
 }
 
