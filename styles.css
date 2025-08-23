@@ -87,9 +87,8 @@ body{
 
 .ip{
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 50px;
+    justify-self: center;
     height: 100vh;
 
 }
@@ -99,7 +98,6 @@ body{
     width: 200px;
     height: 40px;
     position: relative;
-    padding-bottom: 0;
     font-size: 20px;
             
 }
@@ -145,7 +143,12 @@ body{
     }
 
     .sub-title{
-        font-size: 10px;
+        font-size: 8px;
+    }
+
+    #button{
+        font-size: 14px;
+        width: 80px;
     }
 
     .new-text{
@@ -159,4 +162,10 @@ body{
     #TimeInfo{
         font-size: 20px;
     }
+
+    .ip{
+        margin-top: 10px;
+    }
+
+  
 }
