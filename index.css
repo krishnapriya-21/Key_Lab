@@ -1,0 +1,55 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: arial,sans-serif;
+}
+
+.hero{
+    background: linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(38,77,228,0.8) 100%), 
+                  url("./assets/keyboard.jpg") center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content{
+    max-width: 600px;
+}
+
+.hero-title{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-sub{
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    color: rgba(255,255,255,0.8);
+
+}
+.hero-btn{
+    display: inline-block;
+    padding: 14px 32px;
+    background: #e44d26;
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.hero-btn:hover{
+    background: #c43816;
+    transform: translateY(-2px);
+}

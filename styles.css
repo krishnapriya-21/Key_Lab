@@ -30,25 +30,6 @@ body{
 }
 
 
-.main-title{
-       
-    font-size: 45px;
-    text-align: center;
-}
-
-.sub-title{
-
-    align-content: center;
-    color: rgba(0,0,0,50%);
-    
-}
-
-#sub{
-
-    font-size: 15px;
-    text-align: center;
-}
-
 
 
 .result-container{
@@ -63,14 +44,6 @@ body{
    
 }
 
-.sentence-container{
-    display: flex;
-    justify-content: center;
-    justify-items: auto;
-    align-items: baseline;
-    gap: 30px;
-    
-}
 
 #button{
     background-color: maroon;
@@ -78,29 +51,6 @@ body{
     font-size: 15px;
 }
 
-.new-text{
-
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.ip{
-    
-    margin-top: 50px;
-    justify-self: center;
-    height: 100vh;
-
-}
-
-.TextBox{
-
-    width: 200px;
-    height: 40px;
-    position: relative;
-    font-size: 20px;
-            
-}
 
 
 

@@ -1,0 +1,18 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0,0,255, 0.05);
+}
+
+header{
+    background-color: white;
+    height: 100px;
+    width: auto;
+    border-bottom: 5px solid #E5E7EB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
