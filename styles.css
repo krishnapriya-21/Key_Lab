@@ -54,32 +54,10 @@ body{
 
 
 
-.shake{
-
-  color: rgb(193, 4, 67);
-  animation: shake 0.3s ease-in-out;
-  border: 10px;
-  border-color:  rgb(193, 4, 67);
-
-}
-
-.highlight{
-
-    background-color: gold;
-    font-weight: bold;
-    padding: 2px;
-}
 
 
-@keyframes shake{
 
-    0%{ transform: translateX(0);}
-    25%{ transform: translateX(-10px);}
-    50%{ transform: translateX(10px);}
-    75%{ transform : translateX(-10px);}
-    100%{transform : translateX(0);}
 
-}
 
 @media(max-width:767px){
     

@@ -9,21 +9,49 @@
 
 // Variable Array to store Sentences to Display
 
-const Sentences= ["Believe you can and you're halfway there." ,
+const Sentences= 
 
-"The way to get started is to quit talking and begin doing." ,
+["The quick brown fox jumps over the lazy dog, but only after carefully considering whether the effort was worth the energy it would take." ,
 
-"Do what you can, with what you have, where you are." ,
+"Technology continues to evolve at a rapid pace, forcing individuals and organizations to adapt constantly in order to remain relevant and competitive." ,
 
-"Your time is limited, don't waste it living someone else's life." ,
+"While some people prefer quiet mornings filled with coffee and reflection, others thrive in the chaos of bustling streets and endless conversations." ,
 
-"Act as if what you do makes a difference. It does." ,
+"The library was filled with dusty shelves, ancient books, and the faint smell of parchment that seemed to whisper stories from centuries past." ,
 
-"Be yourself; everyone else is already taken." ,
+"Success is not simply the result of talent or luck, but rather the consistent application of discipline, patience, and resilience over time." ,
 
-"Hardships often prepare ordinary people for an extraordinary destiny." ,
+"The rain tapped gently against the window, creating a soothing rhythm that made the entire room feel calm and almost dreamlike." ,
 
-"Don't watch the clock; do what it does. Keep going." ];
+"Traveling to new places opens the mind to different cultures, traditions, and perspectives that challenge preconceived notions about the world." ,
+
+"The mountain stood tall and majestic, its snow-covered peak glistening under the golden rays of the rising sun.",
+
+"In the middle of the crowded marketplace, vendors shouted their prices while customers bargained fiercely for the best possible deal." ,
+
+"The invention of electricity transformed human civilization, enabling progress in science, medicine, communication, and countless other fields.",
+
+"A single act of kindness can ripple outward, touching lives in ways that may never be fully understood or even noticed.",
+
+"The orchestra played with such passion and precision that the audience sat in awe, completely captivated by the music’s power.",
+
+"Writing is not merely about putting words on paper, but about expressing thoughts, emotions, and ideas in a way that resonates deeply.",
+
+"Every challenge presents an opportunity to grow stronger, wiser, and more capable of handling the complexities of life.",
+
+"The desert stretched endlessly, its golden sands shimmering under the relentless heat of the midday sun.",
+
+"The old clock ticked steadily in the corner, marking the passage of time with a rhythm that felt both comforting and inevitable.",
+
+"Education is the foundation upon which societies build progress, innovation, and the hope of a brighter future.",
+
+"The ship sailed across the vast ocean, its sails billowing in the wind as waves crashed against its sturdy hull.",
+
+"A garden filled with blooming flowers, buzzing bees, and chirping birds can bring peace to even the busiest of minds.",
+
+"The stars sparkled brilliantly in the night sky, reminding us of the infinite mysteries that lie beyond our reach."
+
+];
 
 
 // Declaration of  Audio Variables and Files
@@ -39,7 +67,7 @@ const sentenceDisplayElement = document.getElementById("sentence");
 const typingBoxElement= document.getElementById("TypingBox");
 const CongratsMgsElement = document.getElementById("CongratsMsg");
 const timeInfoElement= document.getElementById("TimeInfo");
-const buttonElement= document.getElementById("button");
+const buttonElement= document.getElementsByClassName("hero-btn");
 
 
 

@@ -4,15 +4,102 @@
 
 body{
     background-color: rgba(0,0,255, 0.05);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
     background-color: white;
     height: 100px;
-    width: auto;
     border-bottom: 5px solid #E5E7EB;
-    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#darkModeIcon{
+     width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 5px solid #E5E7EB;
+    gap: 20px;
+}
+
+.main-card input[type="text"] {
+    width: 600px;
+    height: 350px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    margin-top: 20px;
+    
+}
+
+.TextBox{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-card input[type="text"]:focus{
+    outline: royalblue 2px solid;
+}
+
+
+#TypingBox {
+   background-color: #f8f8f8;
+}
+
+.sentence{
+    background: #ffff; 
+    border: 1px solid #999; 
+    
+   }
+
+.shake{
+
+  color: rgb(193, 4, 67);
+  animation: shake 0.3s ease-in-out;
+  border: 10px;
+  border-color:  rgb(193, 4, 67);
+
+}
+
+.highlight{
+
+    background-color: gold;
+    font-weight: bold;
+    padding: 2px;
+}
+
+
+@keyframes shake{
+
+    0%{ transform: translateX(0);}
+    25%{ transform: translateX(-10px);}
+    50%{ transform: translateX(10px);}
+    75%{ transform : translateX(-10px);}
+    100%{transform : translateX(0);}
+
 }
