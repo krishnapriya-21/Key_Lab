@@ -33,7 +33,7 @@ const Sentences=
 
 "A single act of kindness can ripple outward, touching lives in ways that may never be fully understood or even noticed.",
 
-"The orchestra played with such passion and precision that the audience sat in awe, completely captivated by the music’s power.",
+"The orchestra played with such passion and precision that the audience sat in awe, completely captivated by the music's power.",
 
 "Writing is not merely about putting words on paper, but about expressing thoughts, emotions, and ideas in a way that resonates deeply.",
 
@@ -67,7 +67,7 @@ const sentenceDisplayElement = document.getElementById("sentence");
 const typingBoxElement= document.getElementById("TypingBox");
 const CongratsMgsElement = document.getElementById("CongratsMsg");
 const timeInfoElement= document.getElementById("TimeInfo");
-const buttonElement= document.getElementsByClassName("hero-btn");
+const buttonElement= document.querySelector(".hero-btn");
 
 
 
@@ -91,6 +91,12 @@ function GenerateRandomSentence(sentences){
 }
 
 
+// Function to Update Display with Highlighted Word
+function updateDisplaySentence(){
+    sentenceDisplayElement.innerHTML = words.map((word, index) => {
+        return index === currentWordIndex ? `<span class="highlight">${word}</span>` : word;
+    }).join(" ");
+}
 
 
 /* REAL -TIME Typing Validation LOGIC */
@@ -101,6 +107,7 @@ function GenerateRandomSentence(sentences){
 function typingValidation(){
 
 
+    if(!typingBoxElement) return;
     // adding Event Listener to Input Text Box
 
     typingBoxElement.addEventListener("input", () => {
@@ -160,13 +167,10 @@ function typingValidation(){
 
         if (typingBoxElement.value.trim() === generatedSentence) {
 
-           const elapsedTime= updateTimer(Start_Time).toFixed(2);
-
-           showCongratsMsg(CongratsMgsElement,"🎉 Congratulations! 🎉");
-           showTimeInfo(timeInfoElement,elapsedTime);
-        
-           // Clearing text Box after 2 Seconds
-           setTimeout(()=> typingBoxElement.value=" ", 2000);
+            const elapsedTime= updateTimer(Start_Time).toFixed(2);
+            
+            localStorage.setItem("typingTime", elapsedTime);
+            window.location.href = "./result.html";
         }
 
 
@@ -205,27 +209,6 @@ function showErrorEffect(Element){
     setTimeout(()=> Element.classList.remove("shake"),300);
 
 }
-
-
-
-
-
-
-/* HIGHLIGHTING the Current Word LOGIC */
-
-
-
-function updateDisplaySentence(){
-
-   sentenceDisplayElement.innerHTML= words.map((word,index)=>
-
-    index=== currentWordIndex ? `<span class="highlight"> ${word} </span>` : word
-
-    ).join(" ");
-
-}
-
-
 
 
 
@@ -285,15 +268,15 @@ function showCongratsMsg(Element,message){
 
     // Adding Event Listener To Button To display  Random Sentence by Passing Function to it
 
+    if(buttonElement){
     buttonElement.addEventListener("click",() =>{
 
         generatedSentence= GenerateRandomSentence(Sentences);
 
-            sentenceDisplayElement.textContent= generatedSentence;
-
             words= generatedSentence.split(" ");
 
             currentWordIndex=0;
+            updateDisplaySentence();
 
             // Values Of Element are Cleared Upon Button Click
 
@@ -308,14 +291,16 @@ function showCongratsMsg(Element,message){
             expectedWord=words[currentWordIndex];
 
 
-            updateDisplaySentence();
 
             Start_Time= performance.now();
 
     });
+    }
 
  
-    typingBoxElement.focus();
+    if(typingBoxElement){
+        typingBoxElement.focus();
+    }
 
 
     //Calling Function To Validate Input, Show Time and Message
@@ -323,13 +308,54 @@ function showCongratsMsg(Element,message){
     typingValidation();
 
 
-
-
-
-
-
     // Test check in Console
     console.log(buttonElement);
 
     // Test Check Whether it works in Console
     console.log(Sentences);
+
+    // Auto-Start Game on Main Page
+    if(typingBoxElement && sentenceDisplayElement) {
+        generatedSentence = GenerateRandomSentence(Sentences);
+        words = generatedSentence.split(" ");
+        currentWordIndex = 0;
+        updateDisplaySentence();
+        Start_Time = performance.now();
+    }
+
+    // Result Page Display Logic
+    if(timeInfoElement && !typingBoxElement) {
+        const savedTime = localStorage.getItem("typingTime");
+        if(savedTime) {
+            timeInfoElement.innerHTML = `<span class="highlight">${savedTime}</span> Seconds`;
+        }
+    }
+
+    // Dark Mode Toggle Logic
+    function toggleDarkMode() {
+        const darkModeIcon = document.getElementById("darkModeIcon");
+        const logo = document.querySelector(".logo");
+        document.body.classList.toggle("dark-mode");
+
+        if(document.body.classList.contains("dark-mode")){
+            localStorage.setItem("theme", "dark");
+            if(darkModeIcon) darkModeIcon.src = "./assets/Sun.png";
+            if(logo) logo.src = "./assets/KeyLabDark.png";
+        } else {
+            localStorage.setItem("theme", "light");
+            if(darkModeIcon) darkModeIcon.src = "./assets/Moon.png";
+            if(logo) logo.src = "./assets/KeyLab.png";
+        }
+    }
+
+    // Apply Saved Theme on Load
+    (function() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const logo = document.querySelector(".logo");
+            if(darkModeIcon) darkModeIcon.src = "./assets/Sun.png";
+            if(logo) logo.src = "./assets/KeyLabDark.png";
+        }
+    })();

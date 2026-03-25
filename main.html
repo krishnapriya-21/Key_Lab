@@ -4,25 +4,24 @@
         <title> KeyLab - Test </title>
         <meta name="description" content="Start your typing test now and measure your speed and accuracy in real time.">
         <meta property="og:title" content="KeyLab | Professional Typing Test Platform">
-        <meta property="og:description" content="Challenge yourself with KeyLab’s typing test.">
+        <meta property="og:description" content="Challenge yourself with KeyLab's typing test.">
         <link rel="stylesheet" href="./main.css">
     </head>
     <body>
 
         <header>
-            <img src="">
+            <a href="./index.html">
+            <img src="./assets/KeyLab.png" class="logo" href="./index.html">
+            </a>            
             <img src="./assets/Moon.png" id="darkModeIcon"  onclick="toggleDarkMode()">
         </header>
          
 
         <main class="main-card">
-            <input id="sentence" class="TextBox" readonly value="" type="text"/>
-            <input id="TypingBox" class="TextBox" type="text" placeholder="Start Typing Here..."></input>
+            <div id="sentence" class="TextBox"></div>
+            <textarea id="TypingBox" class="TextBox" placeholder="Start Typing Here..."></textarea>
         </main>
        
-
-        <a href="./result.html">Click here</a>
-
     <script src="./script.js"></script>
 
     </body>

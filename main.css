@@ -24,6 +24,10 @@ header{
 
 }
 
+.logo{
+    margin-left: 20px;
+}
+
 #darkModeIcon{
      width: 40px;
     height: 40px;
@@ -46,7 +50,7 @@ header{
     gap: 20px;
 }
 
-.main-card input[type="text"] {
+.TextBox {
     width: 600px;
     height: 350px;
     padding: 10px;
@@ -54,16 +58,16 @@ header{
     border: 2px solid #E5E7EB;
     border-radius: 8px;
     margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    resize: none;
+    word-spacing: 1.5rem;
+    line-height: 3rem;
     
 }
 
-.TextBox{
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
 
-
-.main-card input[type="text"]:focus{
-    outline: royalblue 2px solid;
+.TextBox:focus{
+    outline: #090DFF 2px solid;
 }
 
 
@@ -87,8 +91,7 @@ header{
 }
 
 .highlight{
-
-    background-color: gold;
+    color: #090DFF;
     font-weight: bold;
     padding: 2px;
 }
@@ -102,4 +105,37 @@ header{
     75%{ transform : translateX(-10px);}
     100%{transform : translateX(0);}
 
+}
+
+/*Dark mode style*/
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1E293B;
+}
+
+body.dark-mode header {
+    background-color: #202a3b;
+    border-bottom: 5px solid #333;
+}
+
+body.dark-mode .main-card{
+    background-color: #2F3D55;
+    border: 5px solid #1f2736;
+
+}
+
+body.dark-mode .TextBox {
+    background-color: #1E293B;
+    border: 2px solid #1f2736;
+    color: #E5E7EB;
+}
+
+body.dark-mode .main-card #TypingBox{
+    color: #E5E7EB;
+    background-color: #0F172A;
+}
+
+body.dark-mode .TextBox:focus{
+    outline: #090DFF 2px solid;
 }

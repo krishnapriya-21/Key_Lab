@@ -10,14 +10,25 @@
     <body>
 
         <header>
-            <img src="">
-            <img src="./assets/Moon.png" id="darkModeIcon" onclick="toggleDarkMode()">
+            
+            <a href="./index.html">
+            <img src="./assets/KeyLab.png" class="logo" href="./index.html">
+            </a>
+            <img src="./assets/Moon.png" id="darkModeIcon" class="light-mode" onclick="toggleDarkMode()">
         </header>
 
         <main>
             <div class="result-container">
-                <p id="CongratsMsg"></p>
-                <p id="TimeInfo"></p>
+                <img src="./assets/Trophy.png" class="trophy">
+                <p id="info">Test Complete!</p>
+                
+                <div class="Result-Card">
+                <p id="time-info">You Completed Test in :</p>
+                <h2 id="TimeInfo"></h2>
+                </div>
+
+                <a href="./main.html" class="new-test">Start Over</a>
+
             </div>
         </main>
         <script src="./script.js"></script>

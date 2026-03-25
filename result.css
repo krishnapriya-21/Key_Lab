@@ -26,3 +26,84 @@ header{
     margin-right: 100px;
 
 }
+.logo{
+    margin-left: 20px;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    align-items: center;
+    
+}
+
+.trophy{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#info{
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+#time-info{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.Result-Card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 500px;
+    margin-top: 80px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+}
+
+.new-test{
+    display: inline-block;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(38,77,228,0.8) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s, background 0.2s;
+    margin-top: 50px;
+}
+
+.new-test:hover{
+    background: linear-gradient(135deg, rgba(26,26,46) 0%, rgba(38,77,228) 100%);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1E293B;
+}
+
+body.dark-mode header {
+    background-color: #202a3b;
+    border-bottom: 5px solid #333;
+}
+
+body.dark-mode .Result-Card {
+    background-color: #314260;
+    color: #ffffff;
+}
+
+
+body.dark-mode #info {
+    filter: invert(1);
+}
