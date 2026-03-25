@@ -3,7 +3,7 @@
 // Highlights Current Word in sentence
 // Follows Timer from Button Click To Completion of Typing
 // Warns User for Incorrect character with Shake and Deletion
-// Displays  Congrats Message after Completion and Displays Time Taken 
+// Displays Time Taken 
 
 
 
@@ -57,15 +57,11 @@ const Sentences=
 // Declaration of  Audio Variables and Files
 
 const errorSound=  new Audio("sound/error.wav");
-const successSound= new Audio("sound/success.wav");
-
-
 
 // Declaring Constant Variables and Receiving Elements using DOM
 
 const sentenceDisplayElement = document.getElementById("sentence");
 const typingBoxElement= document.getElementById("TypingBox");
-const CongratsMgsElement = document.getElementById("CongratsMsg");
 const timeInfoElement= document.getElementById("TimeInfo");
 const buttonElement= document.querySelector(".hero-btn");
 
@@ -224,38 +220,6 @@ function updateTimer(Start_Time){
 }
 
 
-/* Display Messages Function */
-
-
-// Function To Display Congrats Message Upon Completion to Element
-
-function showCongratsMsg(Element,message){
-    
-    // Playing Success Sound
-    
-    successSound.play();
-
-    // Updating Text Content
-
-    Element.textContent= message;
-
-    // Styling For Visibility
-
-    Element.style.color= "Red"
-    
-}
-
-// Function to Display Timer upon Completion to Element
-
-    function showTimeInfo(Element,elapsedTime){
-
-        //Updating Text Content
-
-        Element.innerHTML=`You Finished Typing in : <span class= "highlight"> ${elapsedTime} Seconds </span>`;
-
-
-    }
-
 
 
 
@@ -283,8 +247,6 @@ function showCongratsMsg(Element,message){
             typingBoxElement.value= "";
             typingBoxElement.classList.remove("shake");
             
-            CongratsMgsElement.textContent= " ";
-
             timeInfoElement.textContent= " ";
 
             // Variable is reset
